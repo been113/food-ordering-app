@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Ordering & Tracking App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Food Ordering & Tracking App</h1>
+
+  <section class="card">
+    <h2>Create Order</h2>
+    <label>
+      Customer Name:
+      <input type="text" id="customerName" />
+    </label>
+    <label>
+      Address:
+      <input type="text" id="address" />
+    </label>
+    <label>
+      Items (comma-separated, e.g. Burger x2, Fries x1):
+      <input type="text" id="itemsInput" />
+    </label>
+    <button id="createOrderBtn">Create Order</button>
+    <p id="createOrderResult" class="result"></p>
+  </section>
+
+  <section class="card">
+    <h2>Track Order</h2>
+    <label>
+      Order ID:
+      <input type="number" id="trackOrderId" />
+    </label>
+    <button id="trackOrderBtn">Track</button>
+    <pre id="trackOrderResult" class="result"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Update Order Status (Admin)</h2>
+    <label>
+      Order ID:
+      <input type="number" id="updateOrderId" />
+    </label>
+    <label>
+      New Status:
+      <select id="newStatus">
+        <option value="PENDING">PENDING</option>
+        <option value="PREPARING">PREPARING</option>
+        <option value="OUT_FOR_DELIVERY">OUT_FOR_DELIVERY</option>
+        <option value="COMPLETED">COMPLETED</option>
+        <option value="CANCELLED">CANCELLED</option>
+      </select>
+    </label>
+    <button id="updateStatusBtn">Update Status</button>
+    <pre id="updateStatusResult" class="result"></pre>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
